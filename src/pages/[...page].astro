@@ -16,24 +16,6 @@ const { page } = Astro.props;
 
 const len = page.data.length;
 ---
-
-    <!-- giscus -->
-<script src="https://giscus.app/client.js"
-        data-repo="chiceaffy/myblog"
-        data-repo-id="R_kgDORiBKoQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDORiBKoc4C4BwX"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-
 <MainGridLayout>
     <PostPage page={page}></PostPage>
     <Pagination class="mx-auto onload-animation" page={page} style={`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`}></Pagination>
