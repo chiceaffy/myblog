@@ -17,9 +17,6 @@ const { page } = Astro.props;
 const len = page.data.length;
 ---
 
-<MainGridLayout>
-    <PostPage page={page}></PostPage>
-    <Pagination class="mx-auto onload-animation" page={page} style={`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`}></Pagination>
     <!-- giscus -->
 <script src="https://giscus.app/client.js"
         data-repo="chiceaffy/myblog"
@@ -36,4 +33,8 @@ const len = page.data.length;
         crossorigin="anonymous"
         async>
 </script>
+
+<MainGridLayout>
+    <PostPage page={page}></PostPage>
+    <Pagination class="mx-auto onload-animation" page={page} style={`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`}></Pagination>
 </MainGridLayout>
